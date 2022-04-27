@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FREDOM1979/fortuna.git"
+    "url": "git+https://github.com/KoMaR005/Night-Lovell.git"
   },
   "author": "ben",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FREDOM1979/fortuna/issues"
+    "url": "https://github.com/KoMaR005/Night-Lovell/issues"
   },
-  "homepage": "https://github.com/FREDOM1979/fortuna#readme"
+  "homepage": "https://github.com/KoMaR005/Night-Lovell#readme"
 }
