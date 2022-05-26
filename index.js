@@ -77,14 +77,14 @@ const starts = async (sesName) => {
 				fs.writeFileSync('./lib/json/dataGc.json', JSON.stringify(dataGc, null, 2))
 			}
             if (isGroup && dataGc[from].antitagall && !message.isAdmin && (message.mentionedJidList.length == message.groupMembers.length || message.mentionedJidList.length-1 == message.groupMembers.length)){
-                Client.reply(from, 'Tagall detected', message)
+                Client.reply(from, 'Внимание обнаружено!', message)
                 client.groupRemove(from, [sender]).catch(() => Client.reply(from, `Предоставьте боту, админику для  возможности использовать функцию антитег!`, message))
             }
             if (isGroup && dataGc[from].antiviewonce && message.type == 'viewOnceMessage'){
                 var msg = {...message}
                 msg.message = message.message.viewOnceMessage.message
                 msg.message[Object.keys(msg.message)[0]].viewOnce = false
-                Client.reply(from, 'ViewOnce detected!', message)
+                Client.reply(from, 'Антипросмотр обнаружено!', message)
                 client.forwardMessage(from, msg)
             }
             if (isGroup && !message.isAdmin && dataGc[from].antilink && /chat\.whatsapp\.com/gi.test(body)){
